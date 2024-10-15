@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Kanban Tarefas</title>
+</head>
+
+<body>
+    <h1>Meu Quadro de <span>Tarefas</span></h1>
+    <main class="kanban">
+        <!--Card Tarefa Pendente-->
+        <div class="kanban-column" data-id="1">
+            <div class="kanban-title">
+                <h2>
+                    Pendente.
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+
+            </div>
+
+        </div>
+        <!--Card Em Preparação-->
+        <div class="kanban-column" data-id="2">
+            <div class="kanban-title">
+                <h2>
+                    Em Preparação.
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+
+            </div>
+        </div>
+
+        </div>
+        <!--Card Pronto e Enviado-->
+        <div class="kanban-column" data-id="3">
+            <div class="kanban-title">
+                <h2>
+                    Pronto e Enviado.
+                </h2>
+                <button class="add-card">
+                    <i class=" fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+            </div>
+
+        </div>
+        <!--Card Aguardando Nota-->
+        <div class="kanban-column" data-id="4">
+            <div class="kanban-title">
+                <h2>
+                    Aguardando Nota.
+                </h2>
+                <button class="add-card">
+                    <i class=" fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+            </div>
+        </div>
+
+        </div>
+        <!--Card Concluído-->
+        <div class="kanban-column" data-id="5">
+            <div class="kanban-title">
+                <h2>
+                    Concluído.
+                </h2>
+                <button class="add-card">
+                    <i class=" fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+            </div>
+
+        </div>
+        <div id="addTaskModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Adicionar nova tarefa</h2>
+                <form id="addTaskForm">
+                    <label for="task-title">Título da tarefa:</label>
+                    <input type="text" id="task-title" name="task-title" required>
+
+                    <label for="task-desc">Descrição da tarefa:</label>
+                    <textarea id="task-desc" name="task-desc" required></textarea>
+
+                    <label for="task-priority">Nível de prioridade:</label>
+                    <select id="task-priority" name="task-priority" required>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+
+                    <button type="submit">Adicionar Tarefa</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
